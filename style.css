@@ -54,9 +54,12 @@ header{
 
 #picked-student{
     border: 1px solid rgb(208, 201, 201);
-    border-radius: 5px;
+    border-radius: 10px;
     height: 375px;
     width: 375px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 button{
@@ -68,6 +71,15 @@ button{
     box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.4);
 }
 
+.square-avatar{
+    border: 0.5px solid black;
+    border-radius: 5px;
+    height: 45px;
+    width: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 .avatar{
     height: 40px;
     width: 40px;

@@ -15,7 +15,7 @@ addStudentBtn.addEventListener('click', function(event){
 
     const studentName = newInput.value;
     if(!studentName){
-        alert('Add new student!');
+        alert('Input new student!');
         return;
     }
 
@@ -36,12 +36,18 @@ addStudentBtn.addEventListener('click', function(event){
 function addNewStudent(studentName, color){
     const studentContainer = document.createElement('div');
     studentContainer.classList.add('student-item');
-    studentList.append(studentContainer)
+    studentList.append(studentContainer);
+
+    const square = document.createElement('div');
+    square.classList.add('square-avatar');
+    square.style.backgroundColor = color;
+    studentContainer.append(square);
+
 
     const avatar = document.createElement('img');
     avatar.classList.add('avatar');
     avatar.src = `https://api.dicebear.com/9.x/avataaars-neutral/svg?seed=${encodeURIComponent(studentName)}`
-    studentContainer.append(avatar);
+    square.append(avatar);
 
     const student = document.createElement('h3');
     student.textContent = studentName;
