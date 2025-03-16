@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS DOM Homework</title>
+    <script src="main.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="header">
+            <h1>Student picker</h1>
+            <p>Use the form to add students and delete students from the list.</p>
+            <p>Pick a random student by clicking the <span id="bold-text">Pick a student</span> button.</p>
+        </div>
+    </header>
+
+    <div class="box">
+        <form>
+            <div class="add-student">
+                <h2>Add a student</h2>
+                <label for="student-name">Student name:</label>
+                <input type="text" id="student-name">
+    
+                <label for="student-color">Student color:</label>
+                <input type="color" id="student-color">
+    
+                <button id="add-student-btn">Add student</button>
+            </div>
+
+            <div class="list">
+                <h2>Student list</h2>
+            </div>
+        </form>
+      
+        <div class="pick-student">
+            <h2>Pick a random student</h2>
+            <div id="picked-student"><img src="img/imagine.jpg" alt="imagine" width="375" height="375">
+            </div>
+            <h3>Press the button to pick a student</h3>
+            <button id="pick-student-btn">Pick a student</button>
+        </div>
+
+        
+
+    </div>
+</body>
+</html>
