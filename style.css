@@ -42,6 +42,8 @@ header{
     width: 175px;
     border-radius: 5px;
     height: 1.5rem;
+    -webkit-appearance: none;/*tryed to have the box same height as the one for the name */
+    appearance: none;/* not working yet*/
 }
 
 .pick-student {

@@ -62,3 +62,28 @@ function addNewStudent(studentName, color){
         studentContainer.remove();
     })
 }
+
+const pickStudentBtn = document.querySelector('#pick-student-btn');
+pickStudentBtn.addEventListener('click', function() {
+    const studentItems = document.querySelectorAll('.student-item');
+    
+    if (studentItems.length === 0) {
+        alert('No students to pick from!');
+        return;
+    }
+
+    const randomIndex = Math.floor(Math.random() * studentItems.length);
+    const pickedStudentItem = studentItems[randomIndex];
+
+    const pickedStudentColor = pickedStudentItem.querySelector('.square-avatar').style.backgroundColor;
+    const pickedStudentDiv = document.querySelector('#picked-student');
+    pickedStudentDiv.style.backgroundColor = pickedStudentColor;
+    
+    const pickedStudentImgSrc = pickedStudentItem.querySelector('.avatar').src;
+    const pickedStudentImg = document.querySelector('#imagine');
+    pickedStudentImg.src = pickedStudentImgSrc;
+    
+    const pickedStudentName = pickedStudentItem.querySelector('h3').textContent;
+    const pickedName = document.querySelector('#picked-name');
+    pickedName.textContent = pickedStudentName;
+});
